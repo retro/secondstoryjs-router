@@ -38,6 +38,7 @@ steal.plugins("jquery",
         }
         
         SS.Router.currentParams = foundRoute.params;
+        foundRoute.params['_path'] = key;
         OpenAjax.hub.publish(foundRoute.destination, foundRoute.params);
       });
     },
